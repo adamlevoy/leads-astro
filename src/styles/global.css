@@ -179,7 +179,7 @@ footer > div > a {
 			hsla(0, 0%, 0%, 0.5),
 			hsla(0, 0%, 0%, 0.5)
 		),
-		url('/assets/woman-coaching-team-mobile.jpg');
+		url('/assets/woman-coaching-team-mobile.webp');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -314,7 +314,7 @@ footer > div > a {
 }
 
 .how-it-works {
-	background-image: url('./assets/bg-white-large.png');
+	background-image: url('/assets/bg-white-large.webp');
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -362,7 +362,7 @@ footer > div > a {
 }
 
 .faq {
-	background-image: url('./assets/bg-white-large.png');
+	background-image: url('/assets/bg-white-large.webp');
 	background-size: cover;
 	background-position: center;
 	text-align: center;
