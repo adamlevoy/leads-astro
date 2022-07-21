@@ -1,0 +1,38 @@
+---
+
+---
+<script>
+const myself = document.getElementById('myself');
+const company = document.getElementById('company');
+
+function handleRadioInputClick(e) {
+	console.log('clicked: ', e.currentTarget);
+	if (e.currentTarget === myself) {
+		window.location.href = '/quiz?coachingfor=Myself';
+	} else if (e.currentTarget === company) {
+		window.location.href = '/quiz?coachingfor=My+company';
+	}
+}
+
+myself.addEventListener('click', handleRadioInputClick);
+company.addEventListener('click', handleRadioInputClick);
+</script>
+<div class='hero-cta'>
+			<p class='fs-600 fw-bold blue'>I'm seeking coaching for:</p>
+			<div
+				
+				id='myself'
+				class='radio-input-container'
+			>
+				<input type='radio' name='myself' />
+				<p>Myself</p>
+			</div>
+			<div
+				
+				id='company'
+				class='radio-input-container'
+			>
+				<input type='radio' name='myself' />
+				<p>My company</p>
+			</div>
+		</div>

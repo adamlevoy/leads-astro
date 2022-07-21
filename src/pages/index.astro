@@ -1,0 +1,155 @@
+---
+import RadioCtaBox from "../components/RadioCtaBox.astro";
+import Layout from "../layouts/Layout.astro";
+let title = "Elite Execs | Connect with elite-level executive coaches for free";
+let description = "Connect for free with elite-level executive coaches perfectly matched to your needs.";
+let permalink = 'https://leads.adamlevoy.com/';
+---
+
+<Layout {title} {description} {permalink}>
+	<body class="home">
+		<header class="hero">
+			<div>
+				<nav>
+					<div class="logo">
+						<a href="./index.html">
+							<img src="./assets/logo.png" alt="logo" />
+						</a>
+					</div>
+				</nav>
+			</div>
+			<section>
+				<div class="container hero-container grid">
+					<div class="hero-content">
+						<div class="hero-text-container">
+							<h1 class="fw-bold text-neutral-100 uppercase">
+								Free <br /><span class="text-primary-400">Executive Coach</span>
+								Matchmaking
+							</h1>
+							<p class="text-neutral-100">
+								WE CONNECT YOU WITH ELITE-LEVEL COACHES,
+								PERFECTLY MATCHED TO YOUR NEEDS
+							</p>
+						</div>
+					</div>
+					<div>
+						<RadioCtaBox />
+					</div>
+				</div>
+			</section>
+		</header>
+
+		<main>
+			<!-- HOW IT WORKS -->
+			<section class="how-it-works | page-container ">
+				<h2 class="text-primary-400 fs-primary-heading fw-bold uppercase">How it works</h2>
+				<div class="icon-section">
+					<div class="icon-container">
+						<div class="number-icon">
+							<span class="fs-primary-heading">1</span>
+						</div>
+						<p>Tell us what you're looking for</p>
+						<a href="#form" class="btn-primary">take the quiz</a>
+					</div>
+					<div class="icon-container">
+						<div class="number-icon">
+							<span class="fs-primary-heading">2</span>
+						</div>
+						<p>
+							get matched with
+							<strong>up to 3 coaches</strong> who perfectly fit
+							your needs
+						</p>
+					</div>
+					<div class="icon-container">
+						<div class="number-icon">
+							<span class="fs-primary-heading">3</span>
+						</div>
+						<p>
+							your matches will
+							<strong>reach out to to you</strong> so you can get
+							a feel for is you'd like to work together
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- REVIEWS -->
+			<section class="reviews">
+				<div class="container">
+					<h2 class="fs-900 fw-bold uppercase text-neutral-100">your one-stop coaching stop</h2>
+					<div class="grid container reviews-container">
+						<div>
+							<p class="fs-600 fw-bold uppercase text-neutral-100">brilliant concept, amazing fit</p>
+							<div class="headshot">
+								<img src="./assets/quotation-mark.svg" alt="">
+							</div>
+							<p class="review-body">"Can I give this 10 stars? I knew I wanted coaching for myself, and possibly for other leadership at my company Honestly didn't know where to start and was too busy to search & vet dozens of options.<br><br> Took the quiz, had 3 AMAZING coaches contact me, and found honestly the perfect fit for our company. Hope this testimonial serves as a small token of my appreciation!"</p>
+							<p class="fw-bold">- CEO, SaaS Startup</p>
+						</div>
+						<div>
+							<p class="fs-600 fw-bold uppercase text-neutral-100">best decision i've made, promoted in 5 months</p>
+							<div class="headshot">
+								<img src="./assets/quotation-mark.svg" alt="">
+							</div>
+							<p class="review-body">"Working with the coach I found through you was the best decision I've made in a long time. I ended up getting promoted about 5 months into working together, and even eventually referred my coach to my colleague, who also got promoted!<br><br> The fact that the coaches come to you is a huge timesaver, and all the coaches I spoke with were exceptional. The one I eventually worked with was such a perfect fit."</p>
+							<p class="fw-bold">- VP turned CMO, Enterprise Tech</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="faq | page-container text-primary-400">
+				<h2 class="fs-primary-heading fw-bold uppercase">FAQs</h2>
+				<div class="faq-container">
+					<div>
+						<h3 class="text-primary-400 fw-bold uppercase">Is this free?</h3>
+						<p class="text-neutral-900">
+							Yes, our service is totally free.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-primary-400 fw-bold uppercase">Who is this for?</h3>
+						<p class="text-neutral-900">
+							Anyone looking for executive coaching, including
+							individuals, startups, and corporations.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-primary-400 fw-bold uppercase">Why up to 3 matches?</h3>
+						<p class="text-neutral-900">
+							We've found that matching you with up to 3 coaches
+							results in a nearly 100% success rate in finding one
+							that perfectly suits your needs.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-primary-400 fw-bold uppercase">Am I obligated to work with a match?</h3>
+						<p class="text-neutral-900">
+							No. Our service is no-strings-attached with zero
+							obligation.
+						</p>
+					</div>
+				</div>
+				<div class="form-container">
+					<h2 class="fs-primary-heading text-primary-400 fw-bold uppercase">get started</h2>
+					<a href="./quiz.html" class="btn-primary">take the quiz</a>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="logo">
+						<img src="./assets/logo.png" alt="logo" />
+					</div>
+			<a href="#">Contact Us</a>
+			<a href="#">Apply as a Coach</a>
+			<div>
+				<p>&copy Copyright 2022</p>
+				<a href="#">Privacy Policy</a><a href="#">Terms of Use</a
+				><a href="#">CA Privacy</a><a href="#">Accessibility Tools</a>
+			</div>
+		</footer>
+	</body>
+</Layout>
