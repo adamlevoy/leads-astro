@@ -179,7 +179,7 @@ footer > div > a {
 			hsla(0, 0%, 0%, 0.5),
 			hsla(0, 0%, 0%, 0.5)
 		),
-		url('./assets/woman-coaching-team-mobile.jpg');
+		url('/assets/woman-coaching-team-mobile.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -292,7 +292,7 @@ footer > div > a {
 				hsla(0, 0%, 0%, 0.5),
 				hsla(0, 0%, 0%, 0.5)
 			),
-			url('./assets/woman-coaching-team.jpeg');
+			url('/assets/woman-coaching-team.jpeg');
 		height: 90vh;
 	}
 
