@@ -1,17 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-let title = "Elite Execs | Connect with elite-level executive coaches for free";
-let description = "Connect for free with elite-level executive coaches perfectly matched to your needs.";
+let title = "Client Quiz | Get matched for free with elite-level executive coaches";
+let description = "Take our free quiz and get matched with elite-level executive coaches.";
 let permalink = 'https://leads.adamlevoy.com/';
 ---
 
 <Layout {title} {description} {permalink}>
-    <body class="quiz">
-		<script
+    <body>
+		<main class="quiz-container">
+			<script
 			type="text/javascript"
 			src="https://form.jotform.com/jsform/221894969488077"
-		></script>
+			></script>
+		</main>
 	</body>
-</Layout> 
+</Layout>
+
+<style>
+	.quiz-container {
+		display: grid;
+		height: 100vh;
+		width: 100%;
+		background-color: var(--clr-primary-400);
+	}
+
+	@media (min-width: 60em) {
+	.quiz-container {
+		place-items: center;
+	}
+}
+</style>
 

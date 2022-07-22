@@ -1,5 +1,4 @@
 ---
-import RadioCtaBox from "../components/RadioCtaBox.astro";
 import Layout from "../layouts/Layout.astro";
 let title = "Elite Execs | Connect with elite-level executive coaches for free";
 let description = "Connect for free with elite-level executive coaches perfectly matched to your needs.";
@@ -7,7 +6,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 ---
 
 <Layout {title} {description} {permalink}>
-	<body class="home">
+	<body>
 		<header class="hero">
 			<div>
 				<nav>
@@ -19,21 +18,23 @@ let permalink = 'https://leads.adamlevoy.com/';
 				</nav>
 			</div>
 			<section>
-				<div class="container hero-container grid">
+				<div class="container even-columns">
 					<div class="hero-content">
 						<div class="hero-text-container">
-							<h1 class="fw-bold text-neutral-100 uppercase">
+							<h1 class="fs-primary-heading fw-bold text-neutral-100 uppercase">
 								Free <br /><span class="text-primary-400">Executive Coach</span>
 								Matchmaking
 							</h1>
-							<p class="text-neutral-100">
+							<p class="fs-subtitle text-neutral-100">
 								WE CONNECT YOU WITH ELITE-LEVEL COACHES,
-								PERFECTLY MATCHED TO YOUR NEEDS
+								PERFECTLY MATCHED TO YOUR NEEDS <span class="fw-bold">- ALL FOR FREE</span>
 							</p>
 						</div>
-					</div>
-					<div>
-						<RadioCtaBox />
+						<div class='hero-cta shadow-xl-light'>
+							<p class='fs-600 fw-bold text-neutral-100'>I'm seeking coaching for:</p>
+							<a href="/quiz?coachingfor=Myself" class="radio-button fs-subtitle"><span>◯</span> Myself</a>							
+							<a href="/quiz?coachingfor=My+organization" class="radio-button fs-subtitle"><span>◯</span> My organization</a>							
+						</div>
 					</div>
 				</div>
 			</section>
@@ -41,7 +42,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 
 		<main>
 			<!-- HOW IT WORKS -->
-			<section class="how-it-works | page-container ">
+			<section class="how-it-works | container ">
 				<h2 class="text-primary-400 fs-primary-heading fw-bold uppercase">How it works</h2>
 				<div class="icon-section">
 					<div class="icon-container">
@@ -49,7 +50,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 							<span class="fs-primary-heading">1</span>
 						</div>
 						<p>Tell us what you're looking for</p>
-						<a href="#form" class="btn-primary">take the quiz</a>
+						<a href="#form" class="btn-primary shadow-xl">take the quiz</a>
 					</div>
 					<div class="icon-container">
 						<div class="number-icon">
@@ -57,7 +58,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 						</div>
 						<p>
 							get matched with
-							<strong>up to 3 coaches</strong> who perfectly fit
+							<span class="fw-bold">up to 3 coaches</span> who perfectly fit
 							your needs
 						</p>
 					</div>
@@ -77,10 +78,10 @@ let permalink = 'https://leads.adamlevoy.com/';
 			<!-- REVIEWS -->
 			<section class="reviews">
 				<div class="container">
-					<h2 class="fs-900 fw-bold uppercase text-neutral-100">your one-stop coaching stop</h2>
+					<h2 class="fs-900 fw-bold uppercase text-neutral-100">your one-stop coaching shop</h2>
 					<div class="grid container reviews-container">
 						<div>
-							<p class="fs-600 fw-bold uppercase text-neutral-100">brilliant concept, amazing fit</p>
+							<p class="fs-secondary-heading fw-bold uppercase text-neutral-100">brilliant concept, amazing fit</p>
 							<div class="headshot">
 								<img src="./assets/quotation-mark.svg" alt="">
 							</div>
@@ -88,9 +89,9 @@ let permalink = 'https://leads.adamlevoy.com/';
 							<p class="fw-bold">- CEO, SaaS Startup</p>
 						</div>
 						<div>
-							<p class="fs-600 fw-bold uppercase text-neutral-100">best decision i've made, promoted in 5 months</p>
+							<p class="fs-secondary-heading fw-bold uppercase text-neutral-100">best decision i've made, promoted in 5 months</p>
 							<div class="headshot">
-								<img src="./assets/quotation-mark.svg" alt="">
+								<img src="/assets/quotation-mark.svg" alt="">
 							</div>
 							<p class="review-body">"Working with the coach I found through you was the best decision I've made in a long time. I ended up getting promoted about 5 months into working together, and even eventually referred my coach to my colleague, who also got promoted!<br><br> The fact that the coaches come to you is a huge timesaver, and all the coaches I spoke with were exceptional. The one I eventually worked with was such a perfect fit."</p>
 							<p class="fw-bold">- VP turned CMO, Enterprise Tech</p>
@@ -100,24 +101,24 @@ let permalink = 'https://leads.adamlevoy.com/';
 			</section>
 
 			<!-- FAQ -->
-			<section class="faq | page-container text-primary-400">
+			<section class="faq | container text-primary-400">
 				<h2 class="fs-primary-heading fw-bold uppercase">FAQs</h2>
 				<div class="faq-container">
 					<div>
-						<h3 class="text-primary-400 fw-bold uppercase">Is this free?</h3>
+						<h3 class="fs-secondary-heading text-primary-400 fw-bold uppercase">Is this free?</h3>
 						<p class="text-neutral-900">
 							Yes, our service is totally free.
 						</p>
 					</div>
 					<div>
-						<h3 class="text-primary-400 fw-bold uppercase">Who is this for?</h3>
+						<h3 class="fs-secondary-heading text-primary-400 fw-bold uppercase">Who is this for?</h3>
 						<p class="text-neutral-900">
 							Anyone looking for executive coaching, including
 							individuals, startups, and corporations.
 						</p>
 					</div>
 					<div>
-						<h3 class="text-primary-400 fw-bold uppercase">Why up to 3 matches?</h3>
+						<h3 class="fs-secondary-heading text-primary-400 fw-bold uppercase">Why up to 3 matches?</h3>
 						<p class="text-neutral-900">
 							We've found that matching you with up to 3 coaches
 							results in a nearly 100% success rate in finding one
@@ -125,7 +126,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 						</p>
 					</div>
 					<div>
-						<h3 class="text-primary-400 fw-bold uppercase">Am I obligated to work with a match?</h3>
+						<h3 class="fs-secondary-heading text-primary-400 fw-bold uppercase">Am I obligated to work with a match?</h3>
 						<p class="text-neutral-900">
 							No. Our service is no-strings-attached with zero
 							obligation.
@@ -134,22 +135,296 @@ let permalink = 'https://leads.adamlevoy.com/';
 				</div>
 				<div class="form-container">
 					<h2 class="fs-primary-heading text-primary-400 fw-bold uppercase">get started</h2>
-					<a href="./quiz.html" class="btn-primary">take the quiz</a>
+					<a href="./quiz.html" class="btn-primary shadow-xl">take the quiz</a>
 				</div>
 			</section>
 		</main>
 
 		<footer>
 			<div class="logo">
-						<img src="./assets/logo.webp" alt="logo" />
-					</div>
+				<img src="./assets/logo.webp" alt="logo" />
+			</div>
 			<a href="#">Contact Us</a>
 			<a href="#">Apply as a Coach</a>
 			<div>
-				<p>&copy Copyright 2022</p>
-				<a href="#">Privacy Policy</a><a href="#">Terms of Use</a
-				><a href="#">CA Privacy</a><a href="#">Accessibility Tools</a>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Use</a>
+				<a href="#">CA Privacy</a>
+				<a href="#">Accessibility Tools</a>
+				<p class="text-neutral-100">&copy Copyright 2022</p>
 			</div>
 		</footer>
 	</body>
 </Layout>
+
+<style>
+	h1 {
+		line-height: 1.2;
+	}
+
+	.logo {
+		max-width: 10rem;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-rows: max-content 1fr;
+		background-image: linear-gradient(
+				hsla(0, 0%, 0%, 0.5),
+				hsla(0, 0%, 0%, 0.5)
+			),
+			url('/assets/woman-coaching-team-mobile.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
+		padding-block: 1rem;
+	}
+
+	.hero > section {
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-container {
+		margin-top: 2rem;
+		column-gap: 4rem;
+		row-gap: 1rem;
+	}
+
+	.hero-container > div {
+		margin-inline: auto;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		text-transform: uppercase;
+		max-width: 500px;
+	}
+
+	.hero-text-container > h1 {
+		/* max-width: 450px; */
+	}
+
+	.hero-text-container > p {
+		margin-block: 1rem;
+	}
+
+	.hero-cta {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.25rem;
+		width: 100%;
+		padding: 1rem;
+		padding-bottom: 1.75rem;
+		/* border: 5px solid var(--clr-primary-400); */
+		border-radius: 10px;
+		background-color: hsla(196, 100%, 47%, .80);
+		text-align: center;
+	}
+
+	@media (min-width: 60em) {
+		.hero {
+			background-image: linear-gradient(
+					hsla(0, 0%, 0%, 0.5),
+					hsla(0, 0%, 0%, 0.5)
+				),
+				url('/assets/woman-coaching-team.webp');
+			height: 90vh;
+		}
+
+		.hero-container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.hero-content {
+			width: 100%;
+		}
+
+		.hero-text-container > p {
+			max-width: 500px;
+		}
+
+		.cta-container {
+			flex-direction: row;
+		}
+	}
+
+	.radio-button {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		text-align: left;
+		text-decoration: none;
+		margin-inline: auto;
+		background-color: var(--clr-primary-500);
+		border: 2px solid var(--clr-neutral-100);
+		border-radius: 100vmax;
+		padding-block: 0.5rem;
+		padding-inline: 1.5rem;
+		color: var(--clr-neutral-100);
+		cursor: pointer;
+	}
+
+	@media (min-width: 60em) {
+		.radio-button {
+			max-width: 400px;
+		}
+	}
+
+	.radio-button > span {
+		font-size: var(--fs-600);
+		margin-right: 1rem;
+	}
+
+
+.how-it-works {
+	background-image: url('/assets/bg-white-large.webp');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-block: 3rem;
+	color: var(--clr-neutral-900);
+}
+
+.reviews {
+	background-color: var(--clr-primary-400);
+}
+
+.reviews > .container {
+	text-align: center;
+	padding-block: 3rem;
+}
+
+.reviews-container {
+	margin-top: 4rem;
+	row-gap: 2rem;
+}
+
+.reviews-container > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	max-width: 450px;
+	margin-inline: auto;
+}
+
+.headshot {
+	max-width: 4rem;
+	aspect-ratio: 1;
+}
+
+.headshot > img {
+	width: 100%;
+}
+
+.review-body {
+	text-align: justify;
+}
+
+.faq {
+	background-image: url('/assets/bg-white-large.webp');
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding-block: 3rem;
+}
+
+.faq-container {
+	display: grid;
+	row-gap: 2rem;
+	column-gap: 4rem;
+	margin-top: 2rem;
+	max-width: 1000px;
+	margin-inline: auto;
+}
+
+.faq-container > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.faq-container > div > p {
+	max-width: 400px;
+	margin-inline: auto;
+}
+
+.faq-container > div > p {
+	margin-top: 1rem;
+}
+
+@media (min-width: 60em) {
+	.faq-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.reviews-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-block: 3em;
+	color: var(--clr-neutral-900);
+}
+
+.icon-section {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 5rem;
+	margin-top: 4rem;
+	font-size: 18px;
+	text-align: center;
+}
+
+@media (min-width: 60em) {
+	.icon-section {
+		flex-direction: row;
+	}
+}
+
+.icon-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	text-transform: uppercase;
+}
+
+.icon-container > p {
+	max-width: 300px;
+	margin-inline: auto;
+}
+
+.icon-container > select {
+	width: 100%;
+}
+
+.number-icon {
+	display: grid;
+	place-items: center;
+	font-weight: 700;
+	background-color: var(--clr-primary-400);
+	color: var(--clr-neutral-100);
+	min-width: 4rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+</style>

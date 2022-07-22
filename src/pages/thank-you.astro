@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+let title = "Thank You | Elite Execs";
+let description = "Please allow us 48 hours to match and connect you with three elite-level executive coaches tailored to your needs.";
+let permalink = 'https://leads.adamlevoy.com/';
+---
+
+<Layout {title} {description} {permalink}>
+    <body>
+		<header>
+			<div class="container">
+				<nav>
+					<div class="logo">
+						<a href="/">
+							<img src="/assets/logo.webp" alt="logo" />
+						</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main class="container">
+			<div class="thank-you-card">
+				<h1 class="text-primary-400 fs-primary-heading fw-bold uppercase">Thank you!</h1>
+				<p>
+					Please allow us 48 hours to match and connect you with three
+					elite-level executive coaches tailored to your needs.
+				</p>
+	
+				<p>
+					Once your coaches have been identified, we will directly connect
+					you via email and provide the coach with your contact info.
+				</p>
+	
+				<p>
+					Congrats on taking a step towards career growth! We'll be in
+					touch shortly.
+				</p>
+			</div>
+		</main>
+	</body>
+</Layout>
+
+<style>
+	body {
+		background-color: var(--clr-primary-400);
+		display: grid;
+		grid-template-rows: max-content 1fr;
+		place-items: center;
+		padding-block: 1rem;
+	}
+
+	.thank-you-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 1rem;
+		background-color: var(--clr-neutral-100);
+		max-width: 500px;
+		padding: 2rem;
+		border-radius: 20px;
+		color: var(--clr-neutral-900);
+	}
+</style>
+
