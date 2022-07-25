@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ClientForm from "../components/ClientForm.astro";
 
 let title = "Client Quiz | Get matched for free with elite-level executive coaches";
 let description = "Take our free quiz and get matched with elite-level executive coaches.";
@@ -9,10 +10,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 <Layout {title} {description} {permalink}>
     <body>
 		<main class="quiz-container">
-			<script
-			type="text/javascript"
-			src="https://form.jotform.com/jsform/221894969488077"
-			></script>
+			<ClientForm />
 		</main>
 	</body>
 </Layout>
