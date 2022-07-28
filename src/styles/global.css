@@ -15,7 +15,7 @@
 	--fw-bold: 900;
 
 	--fs-400: 1rem;
-	--fs-500: clamp(1.25rem, 3vw, 1.75rem);
+	--fs-500: clamp(1.125rem, 3vw, 1.5rem);
 	--fs-600: clamp(1.5rem, 5vw, 2rem);
 	--fs-900: clamp(2rem, 5vw, 2.5rem);
 
