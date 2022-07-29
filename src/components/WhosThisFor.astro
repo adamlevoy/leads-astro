@@ -1,0 +1,117 @@
+<section class="bg-primary-400 p-block-700">
+    <div class="flow container flex-column text-center">
+        <h2 class="fs-primary-heading fw-bold text-neutral-100 uppercase">Who's this for?</h2>
+        <div class="even-columns">
+            <div class="flow flex-column items-center">
+                <p class="fs-subtitle fw-bold text-neutral-100 uppercase">Individuals</p>
+                <div class="person-icon-wrapper">
+                    <img class="icon" src="/assets/person-icon.svg">
+                </div>
+            </div>
+            <div class="flow flex-column items-center">
+                <p class="fs-subtitle fw-bold text-neutral-100 uppercase">Startups</p>
+                <div class="flex">
+                    <div class="first person-icon-wrapper">
+                        <img class="icon" src="/assets/person-icon.svg">
+                    </div>
+                    <div class="person-icon-wrapper">
+                        <img class="icon" src="/assets/person-icon.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="flow flex-column items-center">
+                <p class="fs-subtitle fw-bold text-neutral-100 uppercase">Companies</p>
+                <div class="flex">
+                    <div class="first person-icon-wrapper">
+                        <img class="icon" src="/assets/person-icon.svg">
+                    </div>
+                    <div class="second person-icon-wrapper">
+                        <img class="icon" src="/assets/person-icon.svg">
+                    </div>
+                    <div class="person-icon-wrapper">
+                        <img class="icon" src="/assets/person-icon.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="fs-secondary-heading fw-bold uppercase text-neutral-100 mt-700">Who are seeking:</h2>
+        <div class="flex wrap justify-center items-center" style="gap: 2rem">
+            <div class="flow card bg-neutral-100 shadow-xl">
+                <h3 class="fs-subtitle fw-bold uppercase">Professional development</h3>
+                <ul role="list">
+                    <li>Career Navigation</li>
+                    <li>Goal Setting</li>
+                    <li>Strength & Weaknesess</li>
+                    <li>Accountability</li>
+                </ul>
+            </div>
+            <div class="flow card bg-neutral-100 shadow-xl">
+                <h3 class="fs-subtitle fw-bold uppercase">Leadership development</h3>
+                <ul role="list">
+                    <li>Communication</li>
+                    <li>Confidence</li>
+                    <li>Influence</li>
+                    <li>EQ & Empathy</li>
+                    <li>Overcoming Fear</li>
+                </ul>
+            </div>
+            <div class="flow card bg-neutral-100 shadow-xl">
+                <h3 class="fs-subtitle fw-bold uppercase">Mental wellness</h3>
+                <ul role="list">
+                    <li>Managing Burnout</li>
+                    <li>Crisis Resiliance</li>
+                    <li>Work/Life Balance</li>
+                </ul>
+            </div>
+            <div class="flow card bg-neutral-100 shadow-xl">
+                <h3 class="fs-subtitle fw-bold uppercase">Culture Support</h3>
+                <ul role="list">
+                    <li>Managing Personalities</li>
+                    <li>Fostering Inclusion</li>
+                    <li>Promoting Diversity</li>
+                </ul>
+            </div>
+            <div class="flow card bg-neutral-100 shadow-xl">
+                <h3 class="fs-subtitle fw-bold uppercase">Business Growth</h3>
+                <ul role="list">
+                    <li>Revenue & Profit Growth</li>
+                    <li>Strategy Consulting</li>
+                    <li>Outside Perspective</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    img[src="/assets/person-icon.svg"] {
+        filter: invert(100%);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .person-icon-wrapper {
+        display: grid;
+        place-items: center;
+        min-width: var(--size-800);
+        aspect-ratio: 1;
+        background-color: var(--clr-primary-600);
+        border-radius: 100vmax;
+        outline: 2px solid var(--clr-neutral-100);
+    }
+
+    .first {
+        z-index: 10;
+        margin-right: -2rem;
+    }
+    .second {
+        z-index: 5;
+        margin-right: -2rem;
+    }
+
+    div.card {
+        min-width: 350px;
+    }
+</style>

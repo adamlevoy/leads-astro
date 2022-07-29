@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/Logo.astro";
+import WhosThisFor from "../components/WhosThisFor.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import Reviews from "../components/Reviews.astro"
 import FAQ from "../components/FAQ.astro"
@@ -44,6 +45,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 			</div>
 		</section>
 		<main>
+			<WhosThisFor />
 			<HowItWorks />
 			<Reviews />
 			<FAQ />
@@ -142,7 +144,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 		text-align: left;
 		text-decoration: none;
 		margin-inline: auto;
-		background-color: var(--clr-primary-500);
+		background-color: var(--clr-primary-600);
 		border: 2px solid var(--clr-neutral-100);
 		border-radius: 100vmax;
 		padding-block: 0.5rem;

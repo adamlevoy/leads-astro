@@ -2,6 +2,7 @@
 	--clr-primary-300: hsl(196, 100%, 80%);
 	--clr-primary-400: hsl(196, 100%, 47%);
 	--clr-primary-500: hsl(196, 100%, 30%);
+	--clr-primary-600: hsl(196, 100%, 20%);
 
 	--clr-neutral-100: hsl(0, 0%, 98%);
 	--clr-neutral-400: hsl(0, 0%, 41%);
@@ -33,6 +34,8 @@
 	--size-500: 2rem;
 	--size-600: 3rem;
 	--size-700: 4rem;
+	--size-800: 5rem;
+	--size-900: 6rem;
 }
 
 /* --------------------- */
@@ -127,7 +130,7 @@ nav {
 /* --------------------- */
 
 .flow > * + * {
-	margin-top: var(--flow-space, 1rem);
+	margin-top: var(--flow-space, 1.5rem);
 }
 
 /* --------------------- */
@@ -163,6 +166,10 @@ nav {
 .flex-column {
 	display: flex;
 	flex-direction: column;
+}
+
+.wrap {
+	flex-wrap: wrap;
 }
 
 .justify-center {
@@ -281,6 +288,10 @@ nav {
 		0px 0px 45px -5px rgba(255, 255, 255, 0.7);
 	box-shadow: 2px 5px 16px 0px #0b325e,
 		0px 0px 45px -5px rgba(255, 255, 255, 0.7);
+}
+
+.mt-500 {
+	margin-top: var(--size-500);
 }
 
 .mt-600 {
