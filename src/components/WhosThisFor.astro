@@ -1,3 +1,11 @@
+---
+const img_01 = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+const img_02 = 'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+const img_03 = 'https://images.unsplash.com/photo-1590650423710-ffa6e7f63440?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80'
+const img_04 = 'https://images.unsplash.com/photo-1573496130141-209d200cebd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80'
+const img_05 = 'https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+---
+
 <section class="bg-primary-400 p-block-700">
     <div class="flow container flex-column text-center">
         <h2 class="fs-primary-heading fw-bold text-neutral-100 uppercase">Who's this for?</h2>
@@ -34,47 +42,65 @@
                 </div>
             </div>
         </div>
+
         <h2 class="fs-secondary-heading fw-bold uppercase text-neutral-100 mt-700">Who are seeking:</h2>
-        <div class="flex wrap justify-center items-center" style="gap: 2rem">
-            <div class="flow card bg-neutral-100 shadow-xl">
-                <h3 class="fs-subtitle fw-bold uppercase">Professional development</h3>
-                <ul role="list">
+        <div class="flex wrap justify-center items-center" style="gap: 3rem">
+            <!-- card 1 -->
+            <div class="card shadow-xl bg-pattern-white">
+                <div class="img-wrapper" {`--imgBackground: url(${img_01})`}>
+                    <h3 class="fs-subtitle fw-bold uppercase">Professional development</h3>
+                </div>
+                <ul class="flow" role="list" style="--flow-space: .5rem">
                     <li>Career Navigation</li>
                     <li>Goal Setting</li>
                     <li>Strength & Weaknesess</li>
                     <li>Accountability</li>
                 </ul>
             </div>
-            <div class="flow card bg-neutral-100 shadow-xl">
-                <h3 class="fs-subtitle fw-bold uppercase">Leadership development</h3>
-                <ul role="list">
+            <!-- card 2 -->
+            <div class="card shadow-xl bg-pattern-white">
+                <div class="img-wrapper" style={`--imgBackground: url(${img_02})`}>
+                    <h3 class="fs-subtitle fw-bold uppercase">Leadership development</h3>
+                </div>
+                <ul class="flow" role="list" style="--flow-space: .5rem">
                     <li>Communication</li>
-                    <li>Confidence</li>
+                    <li>Confidence & Overcoming Fear</li>
                     <li>Influence</li>
                     <li>EQ & Empathy</li>
-                    <li>Overcoming Fear</li>
                 </ul>
             </div>
-            <div class="flow card bg-neutral-100 shadow-xl">
-                <h3 class="fs-subtitle fw-bold uppercase">Mental wellness</h3>
-                <ul role="list">
+            <!-- card 3 -->
+            <div class="card shadow-xl bg-pattern-white">
+                <div class="img-wrapper" style={`--imgBackground: url(${img_03})`}>
+                    <h3 class="fs-subtitle fw-bold uppercase">Mental wellness</h3>
+                </div>
+                <ul class="flow" role="list" style="--flow-space: .5rem">
                     <li>Managing Burnout</li>
+                    <li>Performance Psychology</li>
                     <li>Crisis Resiliance</li>
-                    <li>Work/Life Balance</li>
+                    <li>Work / Life Balance</li>
                 </ul>
             </div>
-            <div class="flow card bg-neutral-100 shadow-xl">
-                <h3 class="fs-subtitle fw-bold uppercase">Culture Support</h3>
-                <ul role="list">
-                    <li>Managing Personalities</li>
-                    <li>Fostering Inclusion</li>
+            <!-- card 4 -->
+            <div class="card shadow-xl bg-pattern-white">
+                <div class="img-wrapper" style={`--imgBackground: url(${img_04})`}>
+                    <h3 class="fs-subtitle fw-bold uppercase">Culture support</h3>
+                </div>
+                <ul class="flow" role="list" style="--flow-space: .5rem">
+                    <li>Facilitating Teamwork</li>
                     <li>Promoting Diversity</li>
+                    <li>Fostering Inclusion</li>
+                    <li>Managing Personalities</li>
                 </ul>
             </div>
-            <div class="flow card bg-neutral-100 shadow-xl">
-                <h3 class="fs-subtitle fw-bold uppercase">Business Growth</h3>
-                <ul role="list">
-                    <li>Revenue & Profit Growth</li>
+            <!-- card 5 -->
+            <div class="card shadow-xl bg-pattern-white">
+                <div class="img-wrapper" style={`--imgBackground: url(${img_05})`}>
+                    <h3 class="fs-subtitle fw-bold uppercase">Business growth</h3>
+                </div>
+                <ul class="flow" role="list" style="--flow-space: .5rem">
+                    <li>Revenue Growth</li>
+                    <li>Profit Boosting</li>
                     <li>Strategy Consulting</li>
                     <li>Outside Perspective</li>
                 </ul>
@@ -90,6 +116,9 @@
 
     ul {
         list-style: none;
+        padding: 2rem;
+        /* text-align: left; */
+        font-weight: var(--fw-semi-bold);
     }
 
     .person-icon-wrapper {
@@ -99,7 +128,7 @@
         aspect-ratio: 1;
         background-color: var(--clr-primary-600);
         border-radius: 100vmax;
-        outline: 2px solid var(--clr-neutral-100);
+        border: 2px solid var(--clr-neutral-100);
     }
 
     .first {
@@ -112,6 +141,32 @@
     }
 
     div.card {
-        min-width: 350px;
+        /* background-color: var(--clr-neutral-100); */
+        flex-basis: 375px;
+        padding: 0;
+        overflow: hidden;
+        /* height: 300px; */
+    }
+
+    .img-wrapper {
+        --imgBackground: url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+
+        background-image: linear-gradient(
+				hsla(0, 0%, 0%, 0.5),
+				hsla(0, 0%, 0%, 0.5)
+			), var(--imgBackground);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 225px;
+    }
+
+    .img-wrapper > h3 {
+        max-width: 15ch;
+        color: var(--clr-neutral-100);
     }
 </style>
