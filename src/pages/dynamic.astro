@@ -1,4 +1,5 @@
 ---
+import DynamicHeadline from "../components/DynamicHeadline";
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/Logo.astro";
 import WhosThisFor from "../components/WhosThisFor.astro";
@@ -10,6 +11,9 @@ import Footer from "../components/Footer.astro"
 let title = "Elite Execs | Connect with elite-level executive coaches for free";
 let description = "Connect for free with elite-level executive coaches perfectly matched to your needs.";
 let permalink = 'https://leads.adamlevoy.com/';
+
+const prefix = 'Free'
+const suffix = 'Matchmaking'
 ---
 
 <Layout {title} {description} {permalink}>
@@ -26,10 +30,7 @@ let permalink = 'https://leads.adamlevoy.com/';
 				<div class="even-columns">
 					<div class="hero-content">
 						<div class="hero-text-container">
-							<h1 class="fs-primary-heading fw-bold text-neutral-100 uppercase">
-								Free <br /><span class="text-primary-400">Executive Coach</span><br>
-								Matchmaking
-							</h1>
+							<DynamicHeadline client:only='react' prefix={prefix} suffix={suffix} />
 							<p class="fs-subtitle text-neutral-100">
 							WE REMOVE THE GUESSWORK & CONNECT YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
 							</p>
