@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import Footer from "../components/Footer.astro"
+
+const { content } = Astro.props;
+---
+
+<Layout title={content.title} description={content.description} permalink={content.permalink}>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <Logo />
+                </nav>
+            </div>
+        </header>
+        <main class="bg-neutral-100">
+            <article>
+                <div class="text-center">
+                    <h1 class="fs-primary-heading">{content.title}</h1>
+                    <h2>{content.subtitle}</h2>
+                </div>
+                <slot />
+            </article>
+        </main>
+    </body>
+    <Footer />
+</Layout>
+
+<style>
+    body {
+        background-color: var(--clr-primary-400);
+    }
+
+    header {
+        padding-block: 1rem;
+    }
+
+    main {
+        width: 100%;
+        padding-inline: 2rem;
+    }
+
+    article {
+        max-width: 75ch;
+        margin-inline: auto;
+        padding-block: 2rem;
+    }
+</style>
