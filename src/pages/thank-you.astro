@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
 let title = "Thank You | Elite Execs Coaching";
 let description = "Please allow us 48 hours to match and connect you with three elite-level executive coaches tailored to your needs.";
 let permalink = 'https://eliteexecscoaching.com/thank-you';
@@ -7,33 +9,15 @@ let permalink = 'https://eliteexecscoaching.com/thank-you';
 
 <Layout {title} {description} {permalink}>
     <body>
-		<header>
-			<div class="container">
-				<nav>
-					<div class="logo">
-						<a href="/">
-							<img src="/assets/logo.webp" alt="logo" />
-						</a>
-					</div>
-				</nav>
-			</div>
-		</header>
+		<Header />
 		<main class="container">
-			<div class="thank-you-card">
-				<h1 class="text-primary-400 fs-primary-heading fw-bold uppercase">Thank you!</h1>
+			<div class="thank-you-card shadow-xl">
+				<h1 class="text-primary-400 fs-primary-heading fw-bold uppercase text-center">Matching in progress...</h1>
 				<p>
-					Please allow us 48 hours to match and connect you with three
-					elite-level executive coaches tailored to your needs.
+					<span class="fw-semi-bold underline">Please be alert for emails</span> from us over the next 24 to 48 hours introducing you to up to 3 of your matched coaches!
 				</p>
-	
 				<p>
-					Once your coaches have been identified, we will directly connect
-					you via email and provide the coach with your contact info.
-				</p>
-	
-				<p>
-					Congrats on taking a step towards career growth! We'll be in
-					touch shortly.
+					We can't wait for you to meet them!
 				</p>
 			</div>
 		</main>
@@ -60,6 +44,10 @@ let permalink = 'https://eliteexecscoaching.com/thank-you';
 		padding: 2rem;
 		border-radius: 20px;
 		color: var(--clr-neutral-900);
+	}
+
+	.underline {
+		text-decoration: underline;
 	}
 </style>
 

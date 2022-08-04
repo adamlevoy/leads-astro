@@ -251,6 +251,10 @@ nav {
 	font-weight: var(--fw-bold);
 }
 
+.fw-semi-bold {
+	font-weight: var(--fw-semi-bold);
+}
+
 .fw-regular {
 	font-weight: var(--fw-regular);
 }
