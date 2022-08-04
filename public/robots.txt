@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /coach-match-1.html
+Disallow: /coach-match-2.html
+Disallow: /dynamic.html
