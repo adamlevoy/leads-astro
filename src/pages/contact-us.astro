@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+let title = "Contact Us | Elite Execs Coaching";
+let description = "Take our free quiz and get matched with elite-level executive coaches.";
+let permalink = 'https://eliteexecscoaching.com/contact-us';
+---
+
+<Layout {title} {description} {permalink}>
+    <body>
+		<Header />
+		<main>
+			<ContactForm />
+		</main>
+		<Footer />
+	</body>
+</Layout>
+
+<style>
+	body {
+		background-color: var(--clr-primary-400);
+	}
+</style>
+
