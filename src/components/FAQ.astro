@@ -1,3 +1,7 @@
+---
+import TakeTheQuiz from "./TakeTheQuiz";
+---
+
 <section class="text-primary-400 text-center bg-pattern-white p-block-700">
     <div class="flow container | flex-column">
         <h2 class="fs-primary-heading fw-bold uppercase">FAQ</h2>
@@ -37,7 +41,9 @@
         </div>
         <div class="flow mt-600">
             <h2 class="fs-primary-heading text-primary-400 fw-bold uppercase">get started</h2>
-            <a href="/quiz" class="btn-primary shadow-xl">take the quiz</a>
+            <div>
+                <TakeTheQuiz client:visible />
+            </div>
         </div>
     </div>
 </section>

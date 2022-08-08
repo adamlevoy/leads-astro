@@ -1,3 +1,7 @@
+---
+import TakeTheQuiz from '../components/TakeTheQuiz'
+---
+
 <section class="how-it-works | bg-pattern-white p-block-700">
     <div class="container flex-column justify-center items-center">
         <h2 class="text-primary-400 fs-primary-heading fw-bold uppercase">How it works</h2>
@@ -7,7 +11,9 @@
                     <span class="fs-primary-heading">1</span>
                 </div>
                 <p><span class="fw-bold">Take our CoachMatch™ Quiz</span> TO TELL US WHAT YOU’RE LOOKING FOR.</p>
-                <a href="/quiz" class="btn-primary shadow-xl">take the quiz</a>
+                <div>
+                    <TakeTheQuiz client:visible />
+                </div>
             </div>
             <div class="flow flex-column items-center uppercase">
                 <div class="number-icon">

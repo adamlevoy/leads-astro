@@ -1,7 +1,7 @@
 ---
 import DynamicHeadline from "../components/DynamicHeadline";
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.astro";
+import Header from "../components/Header.astro";
 import WhosThisFor from "../components/WhosThisFor.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import Reviews from "../components/Reviews.astro"
@@ -19,13 +19,7 @@ const suffix = 'Matchmaking'
 <Layout {title} {description} {permalink}>
 	<body>
 		<section class="hero">
-			<header>
-				<div class="container">
-					<nav>
-						<Logo />
-					</nav>
-				</div>
-			</header>
+			<Header />
 			<div class="container">
 				<div class="even-columns">
 					<div class="hero-content">

@@ -352,3 +352,50 @@ nav {
 	max-width: 3rem;
 	aspect-ratio: 1;
 }
+
+.radio-cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+	max-width: 450px;
+	padding: 1rem;
+	padding-bottom: 1.75rem;
+	/* border: 5px solid var(--clr-primary-400); */
+	border-radius: var(--size-400);
+	background-color: hsla(196, 100%, 47%, 0.8);
+	text-align: center;
+}
+
+.radio-button {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	margin-inline: auto;
+	background-color: var(--clr-primary-600);
+	border: 2px solid var(--clr-neutral-100);
+	border-radius: 100vmax;
+	padding-block: 0.5rem;
+	padding-inline: 1.5rem;
+	color: var(--clr-neutral-100);
+	cursor: pointer;
+}
+
+.radio-button > span {
+	font-size: var(--fs-500);
+	margin-right: 1rem;
+}
+
+@media (min-width: 60em) {
+	.radio-button {
+		max-width: 400px;
+	}
+}
+
+.logo {
+	max-width: 120px;
+	filter: invert(100%);
+}

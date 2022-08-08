@@ -7,11 +7,9 @@ const DynamicHeadline = ({ prefix = 'free', suffix = 'matchmaking' }) => {
 	function keywordInsert() {
 		if (window.location.search) {
 			const queryString = window.location.search;
-			console.log(queryString);
 			const urlParams = new URLSearchParams(queryString);
 			const searchQuery = urlParams.get(param);
 			setKeyword(searchQuery);
-			console.log(searchQuery);
 		} else {
 			console.log(keyword);
 		}
