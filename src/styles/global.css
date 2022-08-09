@@ -162,6 +162,7 @@ nav {
 
 .flex {
 	display: flex;
+	gap: var(--gap, 1rem);
 }
 
 .flex-column {
@@ -236,11 +237,14 @@ nav {
 
 .fs-primary-heading {
 	font-size: var(--fs-primary-heading);
+	font-weight: var(--fw-bold);
 	line-height: 1.2;
 }
 
 .fs-secondary-heading {
 	font-size: var(--fs-secondary-heading);
+	font-weight: var(--fw-bold);
+	line-height: 1.2;
 }
 
 .fs-subtitle {
