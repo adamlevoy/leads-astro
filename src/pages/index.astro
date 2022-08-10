@@ -5,7 +5,7 @@ import WhosThisFor from "../components/WhosThisFor.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import Reviews from "../components/Reviews.astro"
 import FAQ from "../components/FAQ.astro"
-import Footer from "../components/Footer.astro"
+import Footer from "../components/Footer"
 import RadioCTA from '../components/RadioCTA'
 import CompanyLogos from "../components/CompanyLogos.astro";
 
@@ -27,7 +27,7 @@ let permalink = 'https://eliteexecscoaching.com/';
 								Matchmaking
 							</h1>
 							<p class="fs-subtitle text-neutral-100">
-							WE REMOVE THE GUESSWORK & CONNECT YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
+							Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
 							</p>
 						</div>
 						<RadioCTA client:load />
@@ -43,7 +43,7 @@ let permalink = 'https://eliteexecscoaching.com/';
 			<Reviews />
 			<FAQ />
 		</main>
-		<Footer />		
+		<Footer client:visible />		
 	</body>
 </Layout>
 

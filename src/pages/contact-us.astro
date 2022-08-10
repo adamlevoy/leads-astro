@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ContactForm from "../components/ContactForm.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/Footer";
 
 let title = "Contact Us | Elite Execs Coaching";
 let description = "Take our free quiz and get matched with elite-level executive coaches.";
@@ -13,9 +13,9 @@ let permalink = 'https://eliteexecscoaching.com/contact-us';
     <body>
 		<Header />
 		<main>
-			<!-- <ContactForm /> -->
+			<ContactForm />
 		</main>
-		<Footer />
+		<Footer client:visible />
 	</body>
 </Layout>
 

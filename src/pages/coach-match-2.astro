@@ -1,50 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.astro";
+import Header from "../components/Header.astro";
+import DynamicHeadline from "../components/DynamicHeadline";
 import ClientForm from "../components/ClientForm.astro";
 import WhosThisFor from "../components/WhosThisFor.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import Reviews from "../components/Reviews.astro"
 import FAQ from "../components/FAQ.astro"
-import Footer from "../components/Footer.astro"
+import Footer from "../components/Footer"
 import CompanyLogos from "../components/CompanyLogos.astro";
 
 let title = "Elite Execs | Free Executive Coach Matchmaking";
 let description = "Get matched with elite-level executive coaches tailored to your needs, all for free and no commitments.";
 let permalink = 'https://eliteexecscoaching.com/';
+
+const headlinePrefix = 'Free';
+const headlineSuffix = 'Matchmaking';
 ---
 
 <Layout {title} {description} {permalink}>
 	<body>
-		<header class="hero">
-			<div>
-				<nav>
-					<Logo />
-				</nav>
-			</div>
-			<section>
-				<div class="container even-columns">
-					<div class="hero-content">
-						<div class="hero-text-container">
-							<h1 class="fs-primary-heading fw-bold text-neutral-100 uppercase">
-								Free <br /><span class="text-primary-400">Executive Coach</span><br>
-								Matchmaking
-							</h1>
-							<p class="fs-subtitle text-neutral-100">
-								WE REMOVE THE GUESSWORK AND CONNECT YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS <span class="fw-bold">- ALL FOR FREE</span>
-							</p>
-						</div>
-						<div class="curved-arrow-wrapper">
-							<p class="fs-secondary-heading fw-bold text-primary-400 uppercase">take the quiz</p>
-							<img class="curved-arrow" src="/assets/curved-arrow-white.png" alt="">
-						</div>
+		<section class="hero">
+			<Header />
+			<div class="container even-columns">
+				<div class="hero-content">
+					<div class="hero-text-container">
+						<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
+						<p class="fs-subtitle text-neutral-100">
+							Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS <span class="fw-bold">- ALL FOR FREE</span>
+						</p>
 					</div>
-					<div>
-						<ClientForm />
+					<div class="curved-arrow-wrapper">
+						<p class="fs-secondary-heading fw-bold text-primary-400 uppercase">take the quiz</p>
+						<img class="curved-arrow" src="/assets/curved-arrow-white.png" alt="">
 					</div>
 				</div>
-			</section>
-		</header>
+				<div>
+					<ClientForm />
+				</div>
+			</div>
+		</section>
 		<main>
 			<WhosThisFor />
 			<HowItWorks />
@@ -52,7 +47,7 @@ let permalink = 'https://eliteexecscoaching.com/';
 			<Reviews />
 			<FAQ />
 		</main>
-		<Footer />
+		<Footer client:visible />
 	</body>
 </Layout>
 
@@ -64,7 +59,7 @@ let permalink = 'https://eliteexecscoaching.com/';
 				hsla(0, 0%, 0%, 0.5),
 				hsla(0, 0%, 0%, 0.5)
 			),
-			url('/assets/woman-coaching-team-mobile.webp');
+			url('/assets/woman-coaching-team.webp');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -102,15 +97,6 @@ let permalink = 'https://eliteexecscoaching.com/';
 	}
 
 	@media (min-width: 60em) {
-		.hero {
-			background-image: linear-gradient(
-					hsla(0, 0%, 0%, 0.5),
-					hsla(0, 0%, 0%, 0.5)
-				),
-				url('/assets/woman-coaching-team.webp');
-			height: 90vh;
-		}
-
 		.hero-container {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -125,13 +111,14 @@ let permalink = 'https://eliteexecscoaching.com/';
 	}
 
 	.curved-arrow-wrapper {
-		margin-right: auto;
+		margin-inline: auto;
 	}
 
 	.curved-arrow-wrapper img {
 		transform: scaleY(-1) rotate(-50deg);
-		max-width: 200px;
+		max-width: clamp(100px, 10vw, 200px);
 		margin-top: 2rem;
+		margin-inline: auto;
 	}
 
 	@media (min-width: 60em) {

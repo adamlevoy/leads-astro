@@ -1,45 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.astro";
+import Header from "../components/Header.astro";
+import DynamicHeadline from "../components/DynamicHeadline";
 import WhosThisFor from "../components/WhosThisFor.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import Reviews from "../components/Reviews.astro"
 import FAQ from "../components/FAQ.astro"
-import Footer from "../components/Footer.astro"
+import Footer from "../components/Footer"
 import CompanyLogos from "../components/CompanyLogos.astro";
+import RadioCTA from "../components/RadioCTA";
 
 let title = "Elite Execs | Free Executive Coach Matchmaking";
 let description = "Get matched with elite-level executive coaches tailored to your needs, all for free and no commitments.";
 let permalink = 'https://eliteexecscoaching.com/';
+
+const headlinePrefix = 'Free';
+const headlineSuffix = 'Matchmaking';
 ---
 
 <Layout {title} {description} {permalink}>
 	<body>
 		<section class="hero">
-			<header>
-				<div class="container">
-					<nav>
-						<Logo />
-					</nav>
-				</div>
-			</header>
+			<Header />
 			<div class="container">
 				<div class="even-columns">
 					<div class="hero-content">
 						<div class="hero-text-container">
-							<h1 class="fs-primary-heading fw-bold text-neutral-100 uppercase">
-								Free <br /><span class="text-primary-400">Executive Coach</span><br>
-								Matchmaking
-							</h1>
+							<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
 							<p class="fs-subtitle text-neutral-100">
-							WE REMOVE THE GUESSWORK & CONNECT YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
+							Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
 							</p>
 						</div>
-						<div class='hero-cta shadow-xl-light'>
-							<p class='fs-subtitle fw-bold text-neutral-100'>I'm seeking coaching for:</p>
-							<a href="/quiz?coachingfor=My+company" class="radio-button"><span>◯</span> My company</a>							
-							<a href="/quiz?coachingfor=Myself" class="radio-button"><span>◯</span> Myself</a>							
-						</div>
+						<RadioCTA client:load />
 					</div>
 					<div></div>
 				</div>
@@ -52,7 +44,7 @@ let permalink = 'https://eliteexecscoaching.com/';
 			<Reviews />
 			<FAQ />
 		</main>
-		<Footer />		
+		<Footer client:visible />		
 	</body>
 </Layout>
 
