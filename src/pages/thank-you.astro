@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer";
 
 let title = "Thank You | Elite Execs Coaching";
 let description = "Please allow us 48 hours to match and connect you with three elite-level executive coaches tailored to your needs.";
@@ -20,17 +21,14 @@ let permalink = 'https://eliteexecscoaching.com/thank-you';
 			</p>
 		</div>
 	</main>
+	<Footer />
 </Layout>
 
 <style>
-	body {
-		background-color: var(--clr-primary-400);
-		display: grid;
-		grid-template-rows: max-content 1fr;
-		place-items: center;
-		padding-block: 1rem;
+	main {
+		height: 100vh;
 	}
-
+	
 	.thank-you-card {
 		display: flex;
 		flex-direction: column;
