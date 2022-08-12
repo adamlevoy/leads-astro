@@ -19,36 +19,34 @@ const headlineSuffix = 'Matchmaking';
 ---
 
 <Layout {title} {description} {permalink}>
-	<body>
-		<section class="hero">
-			<Header />
-			<div class="container even-columns">
-				<div class="hero-content">
-					<div class="hero-text-container">
-						<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
-						<p class="fs-subtitle text-neutral-100">
-							Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS <span class="fw-bold">- ALL FOR FREE</span>
-						</p>
-					</div>
-					<div class="curved-arrow-wrapper">
-						<p class="fs-secondary-heading fw-bold text-primary-400 uppercase">take the quiz</p>
-						<img class="curved-arrow" src="/assets/curved-arrow-white.png" alt="">
-					</div>
+	<section class="hero">
+		<Header />
+		<div class="container even-columns">
+			<div class="hero-content">
+				<div class="hero-text-container">
+					<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
+					<p class="fs-subtitle text-neutral-100">
+						Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS <span class="fw-bold">- ALL FOR FREE</span>
+					</p>
 				</div>
-				<div>
-					<ClientForm />
+				<div class="curved-arrow-wrapper">
+					<p class="fs-secondary-heading fw-bold text-primary-400 uppercase">take the quiz</p>
+					<img class="curved-arrow" src="/assets/curved-arrow-white.png" alt="">
 				</div>
 			</div>
-		</section>
-		<main>
-			<WhosThisFor />
-			<HowItWorks />
-			<CompanyLogos />
-			<Reviews />
-			<FAQ />
-		</main>
-		<Footer client:visible />
-	</body>
+			<div>
+				<ClientForm />
+			</div>
+		</div>
+	</section>
+	<main>
+		<WhosThisFor />
+		<HowItWorks />
+		<CompanyLogos />
+		<Reviews />
+		<FAQ />
+	</main>
+	<Footer client:visible />
 </Layout>
 
 <style>

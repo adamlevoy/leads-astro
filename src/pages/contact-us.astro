@@ -10,18 +10,10 @@ let permalink = 'https://eliteexecscoaching.com/contact-us';
 ---
 
 <Layout {title} {description} {permalink}>
-    <body>
-		<Header />
-		<main>
-			<ContactForm />
-		</main>
-		<Footer client:visible />
-	</body>
+	<Header />
+	<main>
+		<ContactForm />
+	</main>
+	<Footer client:visible />
 </Layout>
-
-<style>
-	body {
-		background-color: var(--clr-primary-400);
-	}
-</style>
 

@@ -1,5 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import GoogleTagBody from "../components/googleTagBody.astro";
+
 
 const content = Astro.props;
 const { title, description, permalink } = content;
@@ -10,5 +12,8 @@ const { title, description, permalink } = content;
 	<head>
 		<BaseHead {title} {description} {permalink} />
 	</head>
-	<slot />
+	<body>
+		<GoogleTagBody />
+		<slot />
+	</body>
 </html>

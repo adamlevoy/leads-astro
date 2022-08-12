@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ClientForm from "../components/ClientForm.astro";
+import CoachForm from "../components/CoachForm.astro";
+import Footer from "../components/Footer";
+import Header from "../components/Header.astro";
 
 let title = "Client Quiz | Get matched for free with elite-level executive coaches";
 let description = "Take our free quiz and get matched with elite-level executive coaches.";
@@ -8,23 +10,12 @@ let permalink = 'https://eliteexecscoaching.com/quiz';
 ---
 
 <Layout {title} {description} {permalink}>
-	<main class="quiz-container">
-		<ClientForm />
+	<Header />
+	<main class="flex-column justify-center items-center">
+		<h1 class="fs-primary-heading text-neutral-100 text-center mt-400">Join Our Network of Elite Coaches</h1>
+		<CoachForm />
 	</main>
+	<Footer />
 </Layout>
 
-<style>
-	.quiz-container {
-		display: grid;
-		height: 100vh;
-		width: 100%;
-		background-color: var(--clr-primary-400);
-	}
-
-	@media (min-width: 60em) {
-	.quiz-container {
-		place-items: center;
-	}
-}
-</style>
 

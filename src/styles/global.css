@@ -111,6 +111,7 @@ svg {
 body {
 	font-size: var(--fs-body);
 	font-family: var(--ff-body);
+	background-color: var(--clr-primary-400);
 }
 
 header {
@@ -336,6 +337,10 @@ footer > nav > a {
 		0px 0px 45px -5px rgba(255, 255, 255, 0.7);
 	box-shadow: 2px 5px 16px 0px #0b325e,
 		0px 0px 45px -5px rgba(255, 255, 255, 0.7);
+}
+
+.mt-400 {
+	margin-top: var(--size-400);
 }
 
 .mt-500 {

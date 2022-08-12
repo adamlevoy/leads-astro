@@ -19,33 +19,31 @@ const headlineSuffix = 'Matchmaking';
 ---
 
 <Layout {title} {description} {permalink}>
-	<body>
-		<section class="hero">
-			<Header />
-			<div class="container">
-				<div class="even-columns">
-					<div class="hero-content">
-						<div class="hero-text-container">
-							<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
-							<p class="fs-subtitle text-neutral-100">
-							Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
-							</p>
-						</div>
-						<RadioCTA client:load />
+	<section class="hero">
+		<Header />
+		<div class="container">
+			<div class="even-columns">
+				<div class="hero-content">
+					<div class="hero-text-container">
+						<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} />
+						<p class="fs-subtitle text-neutral-100">
+						Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
+						</p>
 					</div>
-					<div></div>
+					<RadioCTA client:load />
 				</div>
+				<div></div>
 			</div>
-		</section>
-		<main>
-			<WhosThisFor />
-			<HowItWorks />
-			<CompanyLogos />
-			<Reviews />
-			<FAQ />
-		</main>
-		<Footer client:visible />		
-	</body>
+		</div>
+	</section>
+	<main>
+		<WhosThisFor />
+		<HowItWorks />
+		<CompanyLogos />
+		<Reviews />
+		<FAQ />
+	</main>
+	<Footer client:visible />
 </Layout>
 
 <style>
