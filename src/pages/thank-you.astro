@@ -21,12 +21,20 @@ let permalink = 'https://eliteexecscoaching.com/thank-you';
 			</p>
 		</div>
 	</main>
-	<Footer />
+	<div class="footer-wrapper | flex justify-center items center">
+		<Footer />
+	</div>
 </Layout>
 
 <style>
 	main {
-		height: 100vh;
+		height: 70vh;
+	}
+
+	.footer-wrapper {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 	}
 	
 	.thank-you-card {
