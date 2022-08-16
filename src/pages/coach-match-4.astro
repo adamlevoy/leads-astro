@@ -23,7 +23,7 @@ const headlineSuffix = 'Matchmaking';
 	<section class="hero">
 		<Header />
 		<div class="container">
-				<div class="hero-content" style="gap: 0">
+				<div class="hero-content">
 					<div class="hero-text-container">
 						<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} center={true} />
 						<p class="fs-subtitle text-neutral-100">
@@ -57,7 +57,7 @@ const headlineSuffix = 'Matchmaking';
 		background-position: center;
 		background-repeat: no-repeat;
 		padding-block: 1rem;
-		min-height: 95vh;
+		min-height: 1000px;
 	}
 
 	.hero-content {
@@ -65,7 +65,7 @@ const headlineSuffix = 'Matchmaking';
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 2rem;
+		gap: 0rem;
 		text-transform: uppercase;
 		text-align: center;
 		margin-block: 2rem;
@@ -89,5 +89,14 @@ const headlineSuffix = 'Matchmaking';
 		.hero-content {
 			width: 100%;
 		}
+	}
+
+	.form-container {
+		width: 100%;
+	}
+
+	.space {
+		margin-top: 10rem;
+		width: 100%;
 	}
 </style>
