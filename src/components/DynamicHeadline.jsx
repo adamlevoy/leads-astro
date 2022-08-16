@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const DynamicHeadline = ({ prefix = 'free', suffix = 'matchmaking' }) => {
+const DynamicHeadline = ({
+	prefix = 'free',
+	suffix = 'matchmaking',
+	center = false,
+}) => {
 	const param = 'lpkw';
 	const [keyword, setKeyword] = useState('Executive Coach');
 
@@ -22,7 +26,7 @@ const DynamicHeadline = ({ prefix = 'free', suffix = 'matchmaking' }) => {
 	return (
 		<h1 className='fs-primary-heading fw-bold text-neutral-100 uppercase'>
 			{prefix}
-			<br></br> <span className='text-primary-400'>{keyword}</span>
+			{!center && <br></br>} <span className='text-primary-400'>{keyword}</span>
 			<br></br> {suffix}
 		</h1>
 	);

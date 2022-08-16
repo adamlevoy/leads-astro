@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import DynamicHeadline from "../components/DynamicHeadline";
+import WhosThisFor from "../components/WhosThisFor.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import Reviews from "../components/Reviews.astro"
+import FAQ from "../components/FAQ.astro"
+import Footer from "../components/Footer"
+import CompanyLogos from "../components/CompanyLogos.astro";
+import RadioCTA_v2 from "../components/RadioCTA_v2";
+
+let title = "Elite Execs | Free Executive Coach Matchmaking";
+let description = "Get matched with elite-level executive coaches tailored to your needs, all for free and no commitments.";
+let permalink = 'https://eliteexecscoaching.com/';
+
+const headlinePrefix = 'Free';
+const headlineSuffix = 'Matchmaking';
+---
+
+<Layout {title} {description} {permalink}>
+	<section class="hero">
+		<Header />
+		<div class="container">
+				<div class="hero-content">
+					<div class="hero-text-container">
+						<DynamicHeadline client:only='react' prefix={headlinePrefix} suffix={headlineSuffix} center={true} />
+						<p class="fs-subtitle text-neutral-100">
+						Our CoachMatch™ Quiz REMOVEs THE GUESSWORK & CONNECTs YOU WITH ELITE COACHES, PERFECTLY MATCHED TO YOUR NEEDS<span class="fw-bold"> - ALL FOR FREE, NO COMMITMENTS</span>
+						</p>
+					</div>
+					<RadioCTA_v2 />
+				</div>
+		</div>
+	</section>
+	<main>
+		<WhosThisFor />
+		<HowItWorks />
+		<CompanyLogos />
+		<Reviews />
+		<FAQ />
+	</main>
+	<Footer client:visible />
+</Layout>
+
+<style>
+	.hero {
+		display: grid;
+		grid-template-rows: max-content 1fr;
+		background-image: linear-gradient(
+				hsla(0, 0%, 0%, 0.75),
+				hsla(0, 0%, 0%, 0.5)
+			),
+			url('/assets/woman-coaching-team-mobile.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding-block: 1rem;
+		min-height: 95vh;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+		margin-block: 2rem;
+	}
+
+	.hero-text-container > p {
+		margin-block: 1rem;
+		max-width: 50ch;
+	}
+
+	@media (min-width: 60em) {
+		.hero {
+			background-image: linear-gradient(
+					hsla(0, 0%, 0%, 0.75),
+					hsla(0, 0%, 0%, 0.5)
+				),
+				url('/assets/woman-coaching-team.webp');
+			height: 90vh;
+		}
+
+		.hero-content {
+			width: 100%;
+		}
+	}
+</style>

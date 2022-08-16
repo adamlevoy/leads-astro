@@ -10,7 +10,7 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<footer class='p-block-700'>
+		<footer className='p-block-700'>
 			<Logo />
 			<nav>
 				<a href={`/contact-us${urlParams}`}>Contact Us</a>

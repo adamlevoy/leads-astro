@@ -416,6 +416,36 @@ footer > nav > a {
 	text-align: center;
 }
 
+.radio-cta-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+	max-width: 450px;
+	padding: 2rem;
+	/* padding-bottom: 1.75rem; */
+	/* border: 5px solid var(--clr-primary-400); */
+	border-radius: var(--size-400);
+	background-color: hsla(0, 0%, 0%, 0.5);
+	backdrop-filter: blur(10px);
+	text-align: center;
+	box-shadow: 8px 8px 50px 5px hsla(0, 0%, 0%, 0.5),
+		4px 4px 20px hsla(0, 0%, 0%, 0.7);
+}
+
+.radio-cta-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.radio-cta-content > .radio-button {
+	justify-content: center;
+}
+
 .radio-button {
 	display: flex;
 	align-items: center;
