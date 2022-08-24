@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /coach-match-1.html
-Disallow: /coach-match-2.html
-Disallow: /dynamic.html
+Disallow: /coach-match-1
+Disallow: /coach-match-2
+Disallow: /dynamic
+Disallow: /quiz
